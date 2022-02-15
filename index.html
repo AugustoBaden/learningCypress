@@ -13,13 +13,7 @@
     <button type="button" onclick="verificarIdade()">verificar Idade</button>
     <h1>personagens</h1>
     <button type="button" onclick="listaMarvels()">array marvels</button>
-    <ul>
-      <li>omi diferro</li>
-      <li>omiranha</li>
-      <li>gavinhao</li>
-      <li>capetao</li>
-      <li>viu uva preta</li>
-    </ul>
+    <ul id="marvels"></ul>
 
     <script type="text/javascript">
       var marvels = [
@@ -31,6 +25,14 @@
       ];
 
       function listaMarvels() {
+        var ul = document.getElementById("marvels");
+        ul.innerHTML = "";
+        marvels.forEach(function (a) {
+          var li = document.createElement("li");
+          var text = document.createTextNode(a);
+          li.appendChild(text);
+          ul.appendChild(li);
+        });
         console.log(marvels);
       }
       function verificarIdade() {
