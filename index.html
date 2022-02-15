@@ -12,8 +12,27 @@
     <input type="number" name="idade" placeholder="SUA IDADE" />
     <button type="button" onclick="verificarIdade()">verificar Idade</button>
     <h1>personagens</h1>
+    <button type="button" onclick="listaMarvels()">array marvels</button>
+    <ul>
+      <li>omi diferro</li>
+      <li>omiranha</li>
+      <li>gavinhao</li>
+      <li>capetao</li>
+      <li>viu uva preta</li>
+    </ul>
 
     <script type="text/javascript">
+      var marvels = [
+        "omi diferro",
+        "omiranha",
+        "gavinhao",
+        "capetao",
+        "viu uva preta",
+      ];
+
+      function listaMarvels() {
+        console.log(marvels);
+      }
       function verificarIdade() {
         var nome = document.querySelector("input[name=nome]");
         var idade = document.querySelector("input[name=idade]");
