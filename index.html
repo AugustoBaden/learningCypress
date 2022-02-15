@@ -15,49 +15,7 @@
     <button type="button" onclick="listaMarvels()">array marvels</button>
     <ul id="marvels"></ul>
 
-    <script type="text/javascript">
-      var marvels = [
-        "omi diferro",
-        "omiranha",
-        "gavinhao",
-        "capetao",
-        "viu uva preta",
-      ];
-
-      function listaMarvels() {
-        var ul = document.getElementById("marvels");
-        ul.innerHTML = "";
-        marvels.forEach(function (a) {
-          var li = document.createElement("li");
-          var text = document.createTextNode(a);
-          li.appendChild(text);
-          ul.appendChild(li);
-        });
-        console.log(marvels);
-      }
-      function verificarIdade() {
-        var nome = document.querySelector("input[name=nome]");
-        var idade = document.querySelector("input[name=idade]");
-
-        if (idade.value.length == 0) {
-          alert("inserir Idade");
-          return;
-        }
-        var idadeNum = parseInt(idade.value);
-
-        if (idadeNum >= 18) {
-          alert("idade adequada");
-        } else if (idadeNum > 4) {
-          ("menor de idade");
-        } else {
-          ("muito jovem");
-        }
-
-        /*  console.log(idade.value);
-        console.log(typeof idade.value);
-        console.log(nome.value);
-        console.log(typeof nome.value); */
-      }
-    </script>
+    <script type="text/javascript" src="js/cnh.js"></script>
+    <script type="text/javascript" src="js/marvels.js"></script>
   </body>
 </html>
