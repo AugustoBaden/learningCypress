@@ -20,7 +20,21 @@ app.get("/marvels", function (req, res) {
 app.get("/cnh", function (req, res) {
   const idade = req.query.idade;
 
-  return res.json({ test: idade });
+  // nome = document.querySelector("input[name=nome]");
+  //var idade = document.querySelector("input[name=idade]");
+
+  if (!idade) {
+    return res.json({ Message: "inserir Idade" });
+  }
+  var idadeNum = parseInt(idade);
+
+  if (idadeNum >= 18) {
+    return res.json({ Message: "idade adequada" });
+  } else if (idadeNum > 4) {
+    return res.json({ Message: "menor de idade" });
+  } else {
+    return res.json({ Message: "muito jovem" });
+  }
 });
 
 app.listen(3000);
